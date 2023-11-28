@@ -7,6 +7,7 @@ const Navbar = () => {
     const [active, setActive] = useState(0);
     const [open, setOpen] = useState(false)
 
+    
 
 
     const navItems = [
@@ -41,7 +42,7 @@ const Navbar = () => {
             <div className="hidden menu md:text-white md:flex md:gap-3">
                 {
                     navItems && navItems.map((item, index) => (
-                        <Link className={`${active === index ? "text-cyan-400" : null}`} onClick={() => setActive(index)} to={item.link}> {item.name}</Link>
+                        <Link key={index} className={`${active === index ? "text-cyan-400" : null}`} onClick={() => setActive(index)} to={item.link}> {item.name}</Link>
                     ))
                 }
 
@@ -55,10 +56,14 @@ const Navbar = () => {
 
 
             {
-                open && <div className="w-[60%] h-screen  absolute bg-[#000000d3] top-0 right-0 flex justify-center items-center flex-col gap-6 text-4xl font-bold z-[-30] overflow-y-hidden text-white">
+                open && <div className="w-[60%] h-screen  absolute bg-[#000000d3] top-0 right-0 flex justify-center items-center flex-col gap-6 text-4xl font-bold z-[-30] overflow-y-hidden text-white" id='screen'>
                     {
                         navItems && navItems.map((item, index) => (
-                            <Link className={`${active === index ? "text-cyan-400" : null}`} onClick={() => setActive(index)} to={item.link}> {item.name}</Link>
+                            <div onClick={(e) => setOpen(false)}>
+                                <Link className={`${active === index ? "text-cyan-400" : null}`} onClick={() => setActive(index)} to={item.link}> {item.name}</Link>
+
+                            </div>
+
                         ))
                     }
 
