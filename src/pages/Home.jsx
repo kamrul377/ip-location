@@ -94,7 +94,7 @@ const Home = () => {
             <article className="lg:border-r lg:border-slate-400 p-6">
               <h2 className="text-sm uppercase text-slate-600">Location</h2>
               <p className="font-bold text-slate-900 text-2xl">
-                {address.location.city}, {'hi'}
+                {address.location.city}, {address.location.region}
               </p>
             </article>
 
