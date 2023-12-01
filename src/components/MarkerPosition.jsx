@@ -4,8 +4,8 @@ import icon from "./icon"
 
 export default function Markerposition({ address }) {
   const position = useMemo(() => {
-    return [51.505, -0.09]
-  }, [51.505, -0.09])
+    return [address.location.lat, address.location.lng]
+  }, [address.location.lat, address.location.lng])
   const map = useMap()
 
   useEffect(() => {

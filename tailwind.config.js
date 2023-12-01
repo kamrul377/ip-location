@@ -6,10 +6,14 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: { 
+      backgroundImage: {
         'banner': "url('/images/new.jpg')",
         'banner1': "url('/images/banner.jpg')",
         'banner2': "url('/images/network.jpg')"
+      },
+      fontFamily: {
+        "fira-sans": "'Fira Sans Condensed', sans-serif",
+        "nova": "'Nova Square', sans-serif"
       }
     },
   },

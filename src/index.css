@@ -1,6 +1,12 @@
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 body {
 
@@ -9,3 +15,6 @@ body {
   scroll-behavior: smooth;
 }
 
+/* 
+font-family: 'Fira Sans Condensed', sans-serif;
+font-family: 'Nova Square', sans-serif; */

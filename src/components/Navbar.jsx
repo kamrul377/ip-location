@@ -35,9 +35,9 @@ const Navbar = () => {
 
     return (
         <div className='bg-[#000000d3] h-20 flex justify-between items-center px-10 z-[-90px]'>
-            <div className="logo font-bold text-4xl md:text-5xl text-white">
-                IP <span className='text-cyan-500'>Location</span>
-            </div>
+            <Link to={'/'} className="logo font-bold text-4xl md:text-5xl text-white font-nova cursor-pointer">
+                IP <span className='text-cyan-500 font-nova'>Location</span>
+            </Link>
 
             <div className="hidden menu md:text-white md:flex md:gap-3">
                 {
