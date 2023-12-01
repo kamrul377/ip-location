@@ -8,7 +8,8 @@ export default {
     extend: {
       backgroundImage: { 
         'banner': "url('/images/new.jpg')",
-        'banner1': "url('/images/banner.jpg')"
+        'banner1': "url('/images/banner.jpg')",
+        'banner2': "url('/images/network.jpg')"
       }
     },
   },
