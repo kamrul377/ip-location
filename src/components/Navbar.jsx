@@ -8,7 +8,14 @@ const Navbar = () => {
     const [open, setOpen] = useState(false)
 
 
+    console.log(open)
 
+    const handleClose = (e) => {
+        const target = e.target;
+        if (target.id === 'screen') {
+            setOpen(!open)
+        }
+    }
 
     const navItems = [
         {
@@ -56,17 +63,19 @@ const Navbar = () => {
 
 
             {
-                open && <div className="w-[60%] min-h-screen  fixed bg-[#000000d3] top-0 right-0 bottom-0  flex justify-center items-center flex-col gap-6 text-4xl font-bold z-[1111] overflow-y-hidden text-white" id='screen'>
-                    {
-                        navItems && navItems.map((item, index) => (
-                            <div key={index} onClick={(e) => setOpen(false)}>
-                                <Link className={`${active === index ? "text-cyan-400" : null}`} onClick={() => setActive(index)} to={item.link}> {item.name}</Link>
+                open && <div onClick={handleClose} className='absolute top-0 left-0 min-w-full h-screen bg-[#0000001e]' id="screen">
+                    <div className={`w-[60%] min-h-screen  fixed bg-[#000000d3] top-0 right-0  flex justify-center items-center flex-col gap-6 text-4xl font-bold z-[1111]  text-white ease-in-out duration-300 ${open? "translate-x-0 ": "translate-x-full"}`}>
+                        {
+                            navItems && navItems.map((item, index) => (
+                                <div key={index} onClick={(e) => setOpen(false)}>
+                                    <Link className={`${active === index ? "text-cyan-400" : null}`} onClick={() => setActive(index)} to={item.link}> {item.name}</Link>
 
-                            </div>
+                                </div>
 
-                        ))
-                    }
+                            ))
+                        }
 
+                    </div>
                 </div>
             }
 
