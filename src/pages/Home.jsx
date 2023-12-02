@@ -6,6 +6,8 @@ import { FaLocationArrow } from "react-icons/fa";
 import { MapContainer, TileLayer } from 'react-leaflet';
 import Markerposition from '../components/MarkerPosition';
 import Loader from '../components/Loader';
+import "leaflet/dist/leaflet.css"
+
 // import Markerposition from "./components/Markerposition"
 
 const Home = () => {
@@ -56,7 +58,7 @@ const Home = () => {
     setLoading(true)
     getEnteredData()
 
-    setIpAddress("")
+    // setIpAddress("")
   }
 
 
